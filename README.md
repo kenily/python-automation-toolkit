@@ -1,6 +1,6 @@
-# 🚀 Python Automation Toolkit
+# 🚀 OpenCLI
 
-Production-ready Python automation scripts for developers and businesses.
+Production-ready automation CLI tools for developers and businesses.
 
 ## ✨ Features
 
@@ -27,60 +27,40 @@ Production-ready Python automation scripts for developers and businesses.
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/kenily/python-automation-toolkit.git
-cd python-automation-toolkit
-pip install -r requirements.txt
+npm install -g opencli
 ```
 
 ## 🛠️ Usage
 
-### Email Sorter
-```python
-from email_sorter import EmailSorter
+```bash
+# Email Sorter
+opencli email-sort --config config.json
 
-sorter = EmailSorter(
-    imap_server='imap.gmail.com',
-    username='your@email.com',
-    password='your-password'
-)
-sorter.run()
-```
+# PDF Extractor
+opencli pdf-extract document.pdf
 
-### PDF Extractor
-```python
-from pdf_extractor import extract_text
+# Social Poster
+opencli post --twitter "Hello world!"
 
-text = extract_text('document.pdf')
-print(text)
-```
-
-### Social Poster
-```python
-from social_poster import SocialPoster
-
-poster = SocialPoster()
-poster.post_twitter("Hello from Python! 🚀")
+# Notion-Sheets Sync
+opencli sync notion --sheet "Data"
 ```
 
 ## 📊 Requirements
 
-- Python 3.8+
-- See requirements.txt for dependencies
+- Node.js 18+
+- npm 9+
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read our [contributing guidelines](CONTRIBUTING.md) first.
+Contributions welcome! Please read our [contributing guidelines](CONTRIBUTING.md) first.
 
 ## 📝 License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=kenily/python-automation-toolkit&type=Date)](https://star-history.com/#kenily/python-automation-toolkit&Date)
-
 ---
 
 **Made with ❤️ for developers**
 
-#Python #Automation #Productivity #OpenSource #DevTools
+#OpenCLI #Automation #Productivity #NodeJS #OpenSource
