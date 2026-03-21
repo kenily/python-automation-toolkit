@@ -59,6 +59,72 @@ Contributions welcome! Please read our [contributing guidelines](CONTRIBUTING.md
 
 MIT License - see [LICENSE](LICENSE) for details.
 
+## 🛠️ Configuration
+
+### Email Sorter Configuration (config.json)
+```json
+{
+  "imap": {
+    "host": "imap.example.com",
+    "port": 993,
+    "user": "your@email.com",
+    "password": "your-password"
+  },
+  "rules": [
+    {"from": "newsletter@*, "folder": "Newsletters"},
+    {"subject": "invoice*", "folder": "Invoices"},
+    {"keyword": "urgent", "priority": "high"}
+  ]
+}
+```
+
+### Environment Variables
+```bash
+export OPENCLI_EMAIL_USER="your@email.com"
+export OPENCLI_EMAIL_PASS="your-password"
+export OPENCLI_NOTION_TOKEN="your-notion-token"
+export OPENCLI_SHEETS_CREDENTIALS="./credentials.json"
+```
+
+## 📊 Examples
+
+### Batch PDF Processing
+```bash
+opencli pdf-extract ./invoices/*.pdf --output json --batch
+```
+
+### Scheduled Social Posting
+```bash
+opencli post schedule --twitter "Hello" --time "2024-01-01 10:00:00"
+```
+
+### Notion-Sheets Sync
+```bash
+opencli sync notion --db "My Database" --sheet "Sheet1" --auto
+```
+
+## 🔧 Development
+
+```bash
+# Clone and setup
+git clone https://github.com/kenily/python-automation-toolkit.git
+cd python-automation-toolkit
+npm install
+
+# Run tests
+npm test
+
+# Build
+npm run build
+```
+
+## 📈 Roadmap
+
+- [ ] AI-powered email responses
+- [ ] More social platforms (Instagram, TikTok)
+- [ ] Webhook integrations
+- [ ] Cloud deployment guides
+
 ---
 
 **Made with ❤️ for developers**
